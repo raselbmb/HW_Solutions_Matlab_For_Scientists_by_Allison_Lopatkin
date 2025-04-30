@@ -61,11 +61,22 @@ disp(logical_matrix);
 
 %% Question_2
 
+% Importing Data
+load("HW3Q2_microplate96.mat")
+Original_Data = microplate_data;
 
+% Removing Edge Values
+Inner_Wells = Original_Data(2:end-1, 2:end-1);
+
+% Counting Wells
+num_Inner_Wells = numel(Inner_Wells);
+
+fprintf('Question_02: After removing the edge wells, %d wells are remaining for analysis.', num_Inner_Wells);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Question_3
+
 
 
 
