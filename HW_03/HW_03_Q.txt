@@ -37,9 +37,9 @@ Question 3 (2 pt):
 
 
 Question 4 (4 pt):
-	A new drug is being tested on efficacy against colon cancer cells. The drug, called SOL147, was incubated with the cell line HCT116 at different concentrations: 0M, 50M, 100M, 300M, and 500M. Cell viability was measured daily over the course of 5 days, and reported as % survival. The file HW3Q4_sol147.mat contains a matrix called survival. In this matrix, every row corresponds to a different day, starting at day 0 in the first row, and ending at day 5 in the last row; every column corresponds to a different drug concentration, starting with 0M in the left most column, and ending with 500M in the right most column. Write a script that does the following:
+	A new drug is being tested on efficacy against colon cancer cells. The drug, called SOL147, was incubated with the cell line HCT116 at different concentrations: 0μM, 50μM, 100μM, 300μM, and 500μM. Cell viability was measured daily over the course of 5 days, and reported as % survival. The file HW3Q4_sol147.mat contains a matrix called survival. In this matrix, every row corresponds to a different day, starting at day 0 in the first row, and ending at day 5 in the last row; every column corresponds to a different drug concentration, starting with 0μM in the left most column, and ending with 500μM in the right most column. Write a script that does the following:
 	• Loads in the data
-	• Creates one vector containing only the data corresponding to treatment with 500M, a second matrix containing the remaining data, and a vector called day that corresponds to the days of treatment (defined using any method of your choice; full credit for answers that do not hard code values)
+	• Creates one vector containing only the data corresponding to treatment with 500μM, a second matrix containing the remaining data, and a vector called day that corresponds to the days of treatment (defined using any method of your choice; full credit for answers that do not hard code values)
 	• Saves a new .mat file called sol147_new that contains the control data, the treatment data, and the days vector
 
 
