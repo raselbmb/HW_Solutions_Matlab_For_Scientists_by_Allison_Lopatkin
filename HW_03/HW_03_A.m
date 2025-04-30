@@ -110,6 +110,20 @@ save("sol147_new.mat", "Control_Data", "Test_Data_500", "Corresponding_Days")
 
 %% Question_5
 
+%Loading all replicates as structures
+rep1 = load("HW3Q4_sol147.mat");
+rep2 = load("HW3Q5_sol147_rep2.mat");
+rep3 = load("HW3Q5_sol147_rep3.mat");
 
+%Saving all structures as matrices
+survival1 = rep1.survival;
+survival2 = rep2.survival;
+survival3 = rep3.survival;
+
+%Combined matricx for day 1
+Day01_Test_Data = [survival1(2, :); survival2(2, :); survival3(2, :)];
+
+%Saving .mat file
+save("sol147_combined.mat", "Day01_Test_Data", "survival1", "survival2", "survival3");
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
