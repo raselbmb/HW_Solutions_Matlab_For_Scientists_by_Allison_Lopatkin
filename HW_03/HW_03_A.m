@@ -77,14 +77,34 @@ fprintf('Question_02: After removing the edge wells, %d wells are remaining for 
 
 %% Question_3
 
+%Load Data
+load("HW3Q3_WNV_per_year.mat");
+Original_WNV = WNVdata;
 
+%Creating New Vector
+Logical_Ind_100_700 = find(100 > Original_WNV(:, 2) | Original_WNV(:, 2) > 700);
+Filtered_WNV = Original_WNV;
+Filtered_WNV(Logical_Ind_100_700, :) =[];
 
+%Saving .mat file
+save("HW3Q3_WNV_per_year_updated.mat", "Original_WNV", "Filtered_WNV");
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Question_4
 
+%Loading Drug Test Data
+load("HW3Q4_sol147.mat");
+Original_Test_Data = survival;
 
+%Manipulating Drug Test Data
+Test_Data_500 = Original_Test_Data (:, end);
+Control_Data = Original_Test_Data (:, 1:end-1);
+Corresponding_Days = (0:size(Original_Test_Data, 1)-1)';
+%Corresponding_Days = (0:5)'; Can also be used
+
+%Saving .mat file
+save("sol147_new.mat", "Control_Data", "Test_Data_500", "Corresponding_Days")
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
