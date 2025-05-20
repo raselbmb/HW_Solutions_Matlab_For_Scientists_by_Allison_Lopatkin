@@ -49,6 +49,19 @@ fprintf('Question_1d: The number of 10''s generated: %d\n', Tens);
 
 %% Question_2
 
+%Created a separate function file as "Check_OddEven.m"
+
+%Random odd and even number Vector
+OddNum = 2* randi([1, 50], 1) - 1;
+EvenNum = 2* randi([1, 50], 1);
+
+% Testing the function with odd number
+fprintf('Testing with an odd number, which is: %d \n', OddNum);
+Check_OddEven(OddevNum);
+
+% Testing the function with even number
+fprintf('Testing with an even number, which is: %d \n', EvenNum);
+Check_OddEven(EvenNum);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
