@@ -67,10 +67,35 @@ Check_OddEven(EvenNum);
 
 %% Question_3
 
+MatrixOf10 = [];
+
+for i = 0:100
+    if rem(i, 10) == 0
+        MatrixOf10 = [MatrixOf10, i];
+    end
+end
+
+disp('Multiples of 10 from 0 to 100:');
+disp(MatrixOf10);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Question_4
+
+load("HW4Q4_HRtrial_single.mat");
+Outcome = [];
+
+for n = 1:length(hr_before)
+    if hr_after (n) < hr_before (n)
+        Outcome (n) = 1; %Effective 1
+    elseif hr_after (n) == hr_before (n)
+        Outcome (n) = 2; %No effect 2
+    else
+        Outcome (n) = 0; %Detrimental 0
+    end
+end
+
+disp(Outcome)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
